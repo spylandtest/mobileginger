@@ -1,6 +1,12 @@
 {
   "name": "mobileginger",
   "app_id": "",
+  "proxies": [
+    {
+      "path": "/FreeCupsApi/consumers",
+      "proxyUrl": "http://www.gingercup.com"
+    }
+  ],
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

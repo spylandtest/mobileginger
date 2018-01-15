@@ -1,0 +1,168 @@
+<!--
+  Generated template for the AddconsumerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+  <ion-navbar>
+    <ion-title>Add Consumer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+      <ion-item>
+          <ion-label color="primary" floating>Estab Name </ion-label>
+          <!--<ion-input type="text" name="EstabName" [(ngModel)]="consumerDetails.EstabName"> </ion-input> -->
+         <!-- <ion-select color="primary" name="EstabName" [(ngModel)]="consumerDetails.EstabName" [compareWith]=""> -->
+                <ion-input type="text" name="EstabName" [(ngModel)]="consumerDetails.EstabName"></ion-input>   
+           
+              <!--</ion-select>-->
+        </ion-item>
+
+     <ion-item>
+          <ion-label color="primary" floating>Name</ion-label>
+         <ion-input type="text" name="ContactName" [(ngModel)]="consumerDetails.ContactName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+           <ion-label color="primary"floating>Phone no</ion-label>
+           <ion-input type="text" name="ContactNo" [(ngModel)]="consumerDetails.ContactNo"></ion-input>
+       </ion-item>
+       <ion-item>
+            <ion-label color="primary"floating>Alt no</ion-label>
+            <ion-input type="text" name="altNo" [(ngModel)]="consumerDetails.altNo"></ion-input>
+        </ion-item>
+
+       <ion-item>
+          <ion-label color="primary" floating>Email   </ion-label>
+          <ion-input type="text" name="EmailId" [(ngModel)]="consumerDetails.EmailId"></ion-input>
+        </ion-item>
+              
+        <ion-item>
+            <ion-label color="primary" floating> Address </ion-label>
+            <ion-input type="text" name="Address" [(ngModel)]="consumerDetails.Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" floating>Location</ion-label>
+          <!--<ion-select  name="Location" [(ngModel)]="consumerDetails.Location" required>
+              <ion-option value="bangalore">bangalore</ion-option>
+              <ion-option value="Hubli">Hubli</ion-option>
+              <ion-option value="Hyderabad">Hyderabad</ion-option>
+         </ion-select> -->
+         <ion-select color="primary" name="Location" [(ngModel)]="consumerDetails.Location" [compareWith]="">
+            
+            <span *ngFor="let location of loactions">
+                <ion-option  [value]="location.locationId">{{ location.locationName }}</ion-option>
+              </span> 
+              </ion-select>
+        </ion-item>
+              
+        <ion-item>
+            <ion-label color="primary" floating> Landmark </ion-label>
+            <ion-input type="text" name="LandMark" [(ngModel)]="consumerDetails.LandMark"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>EstabType</ion-label>
+            <ion-select  name="EstabType" [(ngModel)]="consumerDetails.EstabType" required>
+                    <span *ngFor="let estab of estabTypes">
+                            <ion-option  [value]="estab.typeId">{{ estab.typeName }}</ion-option>
+                    </span> 
+           </ion-select>
+          </ion-item>
+          <ion-row>
+               
+                <ion-label color="primary" class="cupclsss" > Cup size  </ion-label>
+                <ion-col width-50>
+                        <ion-item>
+                <ion-input type="text" name="CupSizes" [(ngModel)]="consumerDetails.CupSizes" ></ion-input>
+            </ion-item>
+        </ion-col>
+            <ion-col width-50>
+                    <ion-item>
+                <ion-input type="text" name="CupSizes2" [(ngModel)]="consumerDetails.CupSizes2" ></ion-input>
+            </ion-item>    
+            </ion-col>
+           
+                <ion-col width-50>
+                        <ion-item>
+                <ion-input type="text" name="CupSizes3" [(ngModel)]="consumerDetails.CupSizes3" ></ion-input>
+                 </ion-item>
+            </ion-col>        
+                
+       
+    </ion-row>    
+    
+    
+    <ion-row>
+            
+             <ion-label color="primary" class="cupclsss" >Quantity </ion-label>
+             <ion-col width-50>
+                     <ion-item>
+             <ion-input type="text" name="CupQuantityPerDay" [(ngModel)]="consumerDetails.CupQuantityPerDay" ></ion-input>
+         </ion-item>
+     </ion-col>
+         <ion-col width-50>
+                 <ion-item>
+             <ion-input type="text" name="CupQuantityPerDay2" [(ngModel)]="consumerDetails.CupQuantityPerDay2" ></ion-input>
+         </ion-item>    
+         </ion-col>
+        
+             <ion-col width-50>
+                     <ion-item>
+             <ion-input type="text" name="CupQuantityPerDay3" [(ngModel)]="consumerDetails.CupQuantityPerDay3" ></ion-input>
+              </ion-item>
+         </ion-col>        
+             
+    
+ </ion-row>
+
+
+<!--
+        <ion-item>
+            <ion-label color="primary" floating> Quantity </ion-label>
+            <ion-input type="text" name="CupQuantityPerDay" [(ngModel)]="consumerDetails.CupQuantityPerDay"></ion-input>
+          </ion-item>
+        -->
+                
+        <ion-item>
+                <ion-label color="primary"floating>Reach</ion-label>
+                <ion-input type="text" name="altNo" [(ngModel)]="consumerDetails.reach"></ion-input>
+            </ion-item>
+
+          <ion-item>
+              <ion-label color="primary" floating> Latitude {{latitude}} </ion-label>
+              <ion-input type="text" name="Lat" [value]="latitude" [(ngModel)]="consumerDetails.Lat"> {{latitude}} </ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" floating>Longitude {{longitude}}</ion-label> 
+              <ion-input type="text" name="Lng" [value]="longitude" [(ngModel)]="consumerDetails.Lng" > {{longitude}}</ion-input>
+          </ion-item>
+                  
+            <ion-item>
+                <ion-label color="primary" floating> Remarks </ion-label>
+                <ion-input type="text" name="Remark" [(ngModel)]="consumerDetails.Remark"></ion-input>
+            </ion-item>
+        <!--
+        <ion-buttons end>
+                    <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+        </ion-buttons> 
+        
+        <ion-item>
+            <div #map id="map"></div> 
+        </ion-item> -->
+        <div *ngIf="devicevalue == true">
+        <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="registerconsumer()">
+                <ion-icon name=""></ion-icon> Add Details
+              </button>
+        </div> 
+        <div *ngIf="devicevalue == false"> 
+     <button ion-button class="submit-btn" full type="submit" [disabled]="devicevalue == false">Add Details</button>
+<p>Please Contact Admin to register Your Unique Mobile ID </p>
+<p>{{DeviceId}}</p>
+</div>
+</ion-content>

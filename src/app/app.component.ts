@@ -1,10 +1,15 @@
-import { Component, ViewChild } from '@angular/core';
+//import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { AddconsumerPage } from '../pages/addconsumer/addconsumer';
+
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = AddconsumerPage;
 
   pages: Array<{title: string, component: any}>;
 
